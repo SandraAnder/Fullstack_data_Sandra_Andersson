@@ -1,0 +1,15 @@
+Mobprogrammering
+	Session 1: Driver: Anna, Navigator: Sandra, Timekeeper: Louise, Note taker: Erik
+		- ratings behöver standardiseras som float
+		- ratings har rader med värdet "|" och kan inte konverteras till float
+		- byter tecken till siffra
+		- nu får vi dock rader med värde 0 som hade behövts tas bort
+
+	Session 2: Driver: Sandra, Navigator:Louise, Timekeeper:Erik, Note taker: Anna
+		- vi behöver hitta raden som ska tas bort 
+		- hittar raden och tar bort raden 
+
+	Session 3: Driver: Louise, Navigator: Erik, Timekeeper:Anna, Note taker: Sandra
+		- Får samma felmeddelande om felaktigt värde
+		- Testar leta efter fler med .contains()
+		- Tidigare felmeddelande gjorde så tidigare celler inte körts. Därav blev det fel
