@@ -1,0 +1,4 @@
+Skapa uv venv första gången = uv venv
+Aktivera uv = source .venv/Scripts/activate
+
+__file__ hämtar den absoluta fil pathen. .parents går upp, sen väljer man ex [0] för att gå upp en mapp.
