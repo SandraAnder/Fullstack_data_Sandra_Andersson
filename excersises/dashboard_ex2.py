@@ -25,18 +25,30 @@ def layout():
     st.plotly_chart(fig)
 
 ##############################################################
-    employee_stats = df.describe()
+
+    # Beräkna statistik
+    count_emp_stat = len(df.index)  # Antal anställda
+    avg_age_stat = df['Age'].mean()  # Medelålder
+    avg_salary_stat = df['Salary_SEK'].mean()  # Medellön
+
+    labels = ['### Antal anställda',
+              '### Medelålder av anställda', '### Medellön av anställda']
+    formatted_stats = [f'{count_emp_stat}',
+                       f'{avg_age_stat:.2f}', f'{avg_salary_stat:.2f} SEK']
+
     cols = st.columns(3)
-    stats = ()
-    labels = ()
 
-    for col, stat, label in zip(cols, stats, labels):
+    # Loop över kolumner och mätvärden för att visa dem
+    for col, label, stat in zip(cols, labels, formatted_stats):
         with col:
-            st.metric(label=label, value=f'{employee_stats[stat]:.0f}')
+            st.markdown(label)
+            st.markdown(stat)
 
-    fig1 = px.line(data_frame=df, x=df.index,
-                   y=df, title=f'Started educations in {employee_stats} 2007-2023', labels={'index': 'year', employee_stats: 'started educations'})
+    fig1 = px.line(data_frame=df, x=df.index, y='Age',
+                   title='Employee Age Over Index',
+                   labels={'index': 'Index', 'Age': 'Age of Employees'})
 
+    st.plotly_chart(fig1)
 
 ##############################################################
     count_emp__stat = len(df.index)
