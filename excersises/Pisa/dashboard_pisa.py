@@ -17,8 +17,16 @@ def layout():
     st.markdown("## Raw data")
     st.dataframe(df)
 
-##############################################################
+    st.markdown("## Multiselect")
+    selected_cols = st.multiselect('Select columns to display', df.columns.to_list(), default=df.columns.to_list())
+    st.dataframe(df[selected_cols])
+    x = st.selectbox('Choose columns', df.columns)
+    fig = px.line(data_frame=df, x=df.index, y=df[x])
 
+    st.plotly_chart(fig)
+
+
+    st.markdown("## Locations")
     pisa_locations = df['LOCATION']
 
     fig = px.bar(data_frame=pisa_locations)
