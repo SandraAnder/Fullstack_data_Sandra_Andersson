@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap');
+
 :root {
     /*modular scale*/
     --ratio: 1.5;
@@ -14,16 +17,16 @@
     --s5: calc(var(--s4) * var(--ratio));
 
     /*CSS variables*/
-    --primary: #050505;
-    --background: #fafafa;
-    --background-secondary: #ebebeb;
+    --primaryColor: #050505;
+    --backgroundColor: #f9fff9;
+    --backgroundColorsecondary: #dcf1e0;
 }
 
 /* lobotomized owl - 
 selector looks for children of body with another sibling */
 body * + * {
     margin-top: var(--s2);
-    background-color: var(--background-secondary);
+    background-color: var(--backgroundColorsecondary);
 }
 
 
@@ -33,7 +36,8 @@ body * + * {
 }
 
 h1, h2, h3, p {
-    color: var(--primary);
+    color: var(--primaryColor);
+    font-family: 'Reddit', sans-serif, 'Condensed';
 }
 
 h1 {
@@ -55,7 +59,7 @@ p {
 /* . to use class selector */
 
 .stAppViewBlockContainer {
-    background-color: var(--background);
+    background-color: var(--backgroundColor);
     padding-top: var(--s1);
     padding-left: var(--s3);
     padding-right: var(--s3);
