@@ -32,8 +32,27 @@ def layout():
     avg_tot = tot_subject.groupby('LOCATION')['Value'].mean().sort_values()
     st.bar_chart(avg_tot)
 
+
     st.markdown('## Trends for each country')
-    st.selectbox
+
+    location = st.selectbox("Choose country", options=df['LOCATION'].unique())
+    filtered_loc =df[df['LOCATION'] == location]
+
+    indicator = st.selectbox("Choose subject", options=filtered_loc['INDICATOR'].unique())
+    filtered_ind = filtered_loc[filtered_loc['INDICATOR'] == indicator]
+
+    subject = st.selectbox("Choose the gender", options=filtered_ind['SUBJECT'].unique())
+    filtered_sub = filtered_ind[filtered_ind['SUBJECT'] == subject]
+
+    fig = px.line(filtered_sub,
+                  x='TIME', 
+                  y='Value', 
+                  title=f'Värde över tid för {location}, {indicator}, {subject}',
+    labels={'YEAR': 'År', 'Value': 'Värde'})
+
+    st.plotly_chart(fig)
+
+# INDICATOR(Math, read, science) och gender(boy, girl, tot) och sen får man pisapoäng
 
 
 if __name__ == "__main__":
