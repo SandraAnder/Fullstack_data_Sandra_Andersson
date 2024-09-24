@@ -18,6 +18,7 @@ def ingest_csv_data_to_duckdb():
                         SELECT * FROM read_csv_auto('{csv_path}');
                         """
                 )
+                
 
 if __name__ == '__main__':
     ingest_csv_data_to_duckdb()

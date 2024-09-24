@@ -20,7 +20,7 @@ class ContentKPI:
         for col, kpi in zip(st.columns(len(kpis)), kpis):
             with col: 
                 st.metric(kpi, round(kpis[kpi]))
-        st.dataframe(df)
+        #st.dataframe(df)
 
 # create more KPIs here
 class DeviceKPI:
