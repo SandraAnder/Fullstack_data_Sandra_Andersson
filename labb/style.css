@@ -1,0 +1,114 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /*modular scale*/
+    --ratio: 1.5;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+
+    /*CSS variables*/
+    --primaryColor: #013151;
+    --backgroundColor: #e2f1f4;
+    --backgroundColorsecondary: #fcfcfc;
+
+    --headingColor: #013151; /* Färg för rubriker */
+    --paragraphColor: #4a4a4a; /* Färg för brödtext */
+}
+
+/* lobotomized owl - 
+selector looks for children of body with another sibling */
+body * + * {
+    margin-top: var(0);
+    background-color: var(--backgroundColorsecondary);
+}
+
+
+/* finds selector on attribute level */
+[data-testid|="stheader"]{
+    display: none;
+}
+
+h1, h2, h3 {
+    color: var(--headingColor);
+    font-family: "Noto Sans", sans-serif;
+}
+p {
+    color: var(--paragraphColor);
+    font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+    font-size: var(--s3);
+}
+
+h2 {
+    font-size: var(--s2);
+}
+
+h3 {
+    font-size: var(--s1);
+}
+
+p {
+    font-size: var(--s0);
+}
+
+/* . to use class selector */
+
+.stAppViewBlockContainer {
+    background-color: var(--backgroundColor);
+    padding-top: var(--s1);
+    padding-left: var(--s3);
+    padding-right: var(--s3);
+    max-width: 110ch; /* 110 characters width */
+}
+
+/* Ändrar bakgrundsfärg och textfärg på selectboxar */
+div[data-baseweb="select"] > div {
+    background-color: #ffffff !important; /* Bakgrundsfärg */
+    color: #013151 !important; /* Textfärg */
+    border: 1px solid #003253 !important; /* Kantfärg */
+    padding: 3px !important;
+    border-radius: 5px !important; /* Rundade hörn */
+    font-family: "Noto Sans", sans-serif !important;
+    font-size: 16px !important;
+    height: auto !important; /* anpassar sig till höjden*/
+    line-height: 1.5 !important; /* Justerar line-height för bättre textvisning */
+    display: flex; /* centrering av elementet */
+    align-items: center; /* Centrerar texten vertikalt */
+}
+
+div[data-baseweb="select"] > div > div {
+    color: #013151 !important; /* Textfärg i selectboxen */
+}
+
+
+/* Ändra utseendet när selectboxen är i fokus */
+div[data-baseweb="select"]:focus-within {
+    outline: none !important;
+    border: 1px solid #009688 !important; /* Ändra färg för kantlinjen vid fokus */
+    box-shadow: 0 0 5px #009688 !important; /* En liten skuggeffekt vid fokus */
+}
+
+
+
+[data-testid|="stVerticalBlockBorderWrapper"] * {
+    background-color: revert;
+}
+
+#MainMenu {visibility: visible;} /* Döljer hamburger-menyn */
+header {
+    visibility: hidden;
+    height: 0;
+} /* Döljer sidhuvudet */
+

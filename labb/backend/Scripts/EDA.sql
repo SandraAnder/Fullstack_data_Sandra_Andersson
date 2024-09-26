@@ -7,7 +7,8 @@ SELECT
 	STRFTIME('%Y-%m-%d', tot.datum),
 	tot.visningar,
 	tab.visningar,
-	tab."visningstid (timmar)"
+	tab."visningstid (timmar)",
+	tab."Genomsnittlig visningslängd"
 FROM
 	date_total as tot
 LEFT JOIN date_table as tab
@@ -32,11 +33,42 @@ ORDER BY
 	"visningstid (timmar)" DESC;
 
 
+
 SELECT * FROM innehall.tabelldata;
 
+-- Tittar på kön och hur dessa tittar på innehållet
+SELECT 
+    "Tittarnas ålder",
+    "Visningar (%)",
+    "Genomsnittlig visningslängd",
+    "Genomsnittlig procent som har visats (%)",
+    "Visningstid (timmar) (%)"
+FROM 
+    tittare.tabelldata_kon;
+
+   -- Tittar på åldersgrupper och hur dessa tittar på innehållet
+   SELECT 
+    "Tittarnas kön",
+    "Visningar (%)",
+    "Genomsnittlig visningslängd",
+    "Genomsnittlig procent som har visats (%)",
+    "Visningstid (timmar) (%)"
+FROM 
+    tittare.tabelldata_alder;
 
 
 
+-- Vilka är de mest populära/mest sedda videorna top 15
+SELECT * FROM innehall.tabelldata;
+
+SELECT 
+	Videotitel,
+	Visningar
+FROM innehall.tabelldata
+ORDER BY Visningar DESC LIMIT 15;
+   
+   
 
 
 desc;
+
