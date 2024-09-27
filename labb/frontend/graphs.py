@@ -21,8 +21,6 @@ class ViewsTrend:
             width=4,
             color=Color.PRIMARY))
 
-    #def plot_age_gender(self):
-
     def top_15_plot(self):
         self.content_top15 = self.content_top15.sort_values(by='Antal_visningar', ascending=False)
 

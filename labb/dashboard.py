@@ -18,12 +18,28 @@ def layout():
     st.markdown("Den här dashboarden syftar till att utforska datan i min youtubekanal")
     # device_kpi.display_device_views()
     # device_kpi.display_device_summary()
-    content_kpi.display_content()
-    views_graph.display_plot()
-    age_kpi.display_gender_age()
-    #plot_a_g.plot_age_gender()
-    top_15.display_top_videos()
-    top_15_plot.top_15_plot()
+
+    # Skapa en meny i sidofältet
+    st.sidebar.title("Huvudmeny")
+    page = st.sidebar.radio("Välj en sida", ("KPIer för videor", "Antal visningar för kön/ålder", "Topp 15 videor"))
+
+    # Sida 1
+    if page == "KPIer för videor":
+        st.header("KPIer för videor")
+        st.markdown("Nedan visas KPIer för totalt antal")
+
+        content_kpi.display_content()
+        views_graph.display_plot()
+    # sida 2
+    elif page == "Antal visningar för kön/ålder":
+        st.header("Antal visningar under senaste månaden")
+        age_kpi.display_gender_age()
+
+    # sida 3
+    elif page == "Topp 15 videor":
+        st.header("Topp 15 mest tittade videor")
+        top_15.display_top_videos()
+        top_15_plot.top_15_plot()
 
 
     read_css()

@@ -108,7 +108,7 @@ div[data-baseweb="select"]:focus-within {
 
 #MainMenu {visibility: visible;} /* Döljer hamburger-menyn */
 header {
-    visibility: hidden;
+    visibility: hidden; /*deploy knappen*/
     height: 0;
 } /* Döljer sidhuvudet */
 

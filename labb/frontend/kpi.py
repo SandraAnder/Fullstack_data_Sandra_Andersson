@@ -34,8 +34,8 @@ class AgeGenderKPI:
 
         st.markdown("## Data per tittare")
         st.markdown("Nedan visas KPIer för kön och ålder")
-        #st.dataframe(gender_df)
-        #st.dataframe(age_df)
+        # st.dataframe(gender_df)
+        # st.dataframe(age_df)
 
         gender_kpis = {
             "Tittarnas ålder": gender_df["Kön"],
@@ -76,19 +76,6 @@ class AgeGenderKPI:
             st.write(f"- Genomsnittlig visningslängd: {filtered_age_df['Genomsnittlig visningslängd'].values[0]}")
             st.write(f"- Genomsnittlig procent som har visats: {filtered_age_df['Genomsnittlig_%_visat'].values[0]}")
 
-
-
-
-        # for col, kpi in zip(st.columns(len(gender_kpis)), gender_kpis):
-        #     with col:
-        #         value = round(gender_kpis[kpi], 2)
-        #         st.write(f"**{kpi}:** {value}")
-
-        # st.markdown("### KPIer för ålder")
-        # for col, kpi in zip(st.columns(len(age_kpis)), age_kpis):
-        #     with col:
-        #         value = round(age_kpis[kpi], 2)
-        #         st.write(f"**{kpi}:** {value}")
 
 class Top15KPI:
     def __init__(self) -> None:

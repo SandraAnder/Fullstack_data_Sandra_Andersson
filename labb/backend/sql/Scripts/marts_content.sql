@@ -77,11 +77,13 @@ SELECT
 FROM
 	marts.content_view_time;
 
-
 SELECT
 	*
 FROM
 	marts.views_per_date;
+
+
+
 
 SELECT
 	*
@@ -93,3 +95,7 @@ SELECT
 FROM
 	marts.content_age_viewers;
 
+SELECT
+	*
+FROM
+	marts.content_top_15_viewed
