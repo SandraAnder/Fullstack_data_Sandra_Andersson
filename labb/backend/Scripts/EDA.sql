@@ -80,10 +80,14 @@ GROUP BY Geografi;
 
 -- Vilka operativsyststem och visningar
 SELECT 
-	DISTINCT(Operativsystem),
-	Visningar
+    Operativsystem,
+    SUM(Visningar) AS Totala_visningar
 FROM 
-	operativsystem.diagramdata;
+    operativsystem.diagramdata
+GROUP BY 
+    Operativsystem
+ORDER BY 
+    Totala_visningar DESC;
 
 
 -- Prenumeranter 

@@ -64,6 +64,66 @@ FROM
 
 
 
+CREATE TABLE IF NOT EXISTS marts.content_viewer_geografy AS (
+SELECT
+	Geografi,
+	COUNT(Geografi)
+FROM
+	geografi.diagramdata
+GROUP BY Geografi);
+
+CREATE TABLE IF NOT EXISTS marts.op_system_views AS (
+SELECT 
+    Operativsystem,
+    SUM(Visningar) AS Totala_visningar
+FROM 
+    operativsystem.diagramdata
+GROUP BY 
+    Operativsystem
+ORDER BY 
+    Totala_visningar DESC);
+
+
+CREATE TABLE IF NOT EXISTS marts.subscribers AS (
+SELECT 
+        "Prenumerationskälla",
+        SUM(Prenumeranter) AS Totala_prenumeranter,
+        SUM("Nya prenumeranter") AS Totala_nya_prenumeranter,
+        SUM("Förlorade prenumeranter") AS Totala_förlorade_prenumeranter
+    FROM 
+        prenumerationskalla.tabelldata
+    GROUP BY 
+        "Prenumerationskälla");
+
+
+CREATE TABLE IF NOT EXISTS marts.subs_source AS (
+SELECT 
+	DISTINCT(Prenumerationskälla), 
+	Prenumeranter 
+FROM 
+	prenumerationskalla.diagramdata);
+
+
+CREATE TABLE IF NOT EXISTS marts.content_10_latest_vid AS (
+WITH video_table AS (SELECT * FROM innehall.tabelldata),
+     video_diagram AS (SELECT * FROM innehall.diagramdata)
+SELECT 
+    DISTINCT(vtab."Videotitel"),
+    vtab."Publiceringstid för video",
+    vtab.visningar AS totala_visningar,
+    vtab."Visningstid (timmar)",
+    vtab.Prenumeranter,
+FROM
+    video_table AS vtab
+LEFT JOIN video_diagram AS vdia
+ON vtab."Publiceringstid för video" = vdia."Publiceringstid för video"
+WHERE 
+    STRPTIME(vtab."Publiceringstid för video", '%b %d, %Y') >= STRPTIME('2024-01-01', '%Y-%m-%d') -- här omvandlas det till en datumsträng för att kunna sortera på år och ta bort de äldre videorna
+ORDER BY (STRPTIME(vtab."Publiceringstid för video", '%b %d, %Y'), totala_visningar) DESC LIMIT 10);
+
+
+
+
 SELECT
 	*
 FROM
@@ -98,4 +158,29 @@ FROM
 SELECT
 	*
 FROM
-	marts.content_top_15_viewed
+	marts.content_top_15_viewed;
+
+SELECT
+	*
+FROM
+	marts.content_viewer_geografy;
+
+SELECT
+	*
+FROM
+	marts.op_system_views;
+
+SELECT
+	*
+FROM
+	marts.subscribers;
+
+SELECT
+	*
+FROM
+	marts.subs_source;
+
+SELECT
+	*
+FROM
+	marts.content_10_latest_vid;
