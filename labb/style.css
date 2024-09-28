@@ -18,8 +18,8 @@
 
     /*CSS variables*/
     --primaryColor: #013151;
-    --backgroundColor: #e2f1f4;
-    --backgroundColorsecondary: #fcfcfc;
+    --backgroundColor: #f3ffec;
+    --backgroundColorsecondary: #f3ffec;
 
     --headingColor: #013151; /* Färg för rubriker */
     --paragraphColor: #4a4a4a; /* Färg för brödtext */
@@ -70,7 +70,7 @@ p {
     padding-top: var(--s1);
     padding-left: var(--s3);
     padding-right: var(--s3);
-    max-width: 110ch; /* 110 characters width */
+    max-width:95%; /* 110 characters width, also the width of my 'green' main section */ 
 }
 
 /* Ändrar bakgrundsfärg och textfärg på selectboxar */
@@ -83,6 +83,8 @@ div[data-baseweb="select"] > div {
     font-family: "Noto Sans", sans-serif !important;
     font-size: 16px !important;
     height: auto !important; /* anpassar sig till höjden*/
+    max-width: 300px !important;  /* Set your desired width */
+    width: auto !important;       /* Adjust the width automatically */
     line-height: 1.5 !important; /* Justerar line-height för bättre textvisning */
     display: flex; /* centrering av elementet */
     align-items: center; /* Centrerar texten vertikalt */
@@ -98,6 +100,9 @@ div[data-baseweb="select"]:focus-within {
     outline: none !important;
     border: 1px solid #009688 !important; /* Ändra färg för kantlinjen vid fokus */
     box-shadow: 0 0 5px #009688 !important; /* En liten skuggeffekt vid fokus */
+    height: auto !important; /* anpassar sig till höjden*/
+    max-width: 300px !important;  /* Set your desired width */
+    width: auto !important;
 }
 
 
@@ -112,3 +117,7 @@ header {
     height: 0;
 } /* Döljer sidhuvudet */
 
+/* Här ändras 'bakgrundsfärgen' till sidopanelen*/
+[data-testid="stSidebar"] {
+    background-color: #9ebd8d;
+}

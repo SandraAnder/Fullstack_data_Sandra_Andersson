@@ -68,11 +68,20 @@ SELECT
 FROM innehall.tabelldata
 ORDER BY Visningar DESC LIMIT 15;
    
-  
+ 
 -- Var finns tittarna
+SELECT 
+	Geografi, 
+	Visningar,
+	"Genomsnittlig visningslängd"
+FROM 
+	geografi.tabelldata
+ORDER BY 
+	"Visningar" DESC;
+
 SELECT
 	Geografi,
-	COUNT(Geografi)
+	COUNT(Geografi) AS 
 FROM
 	geografi.diagramdata
 GROUP BY Geografi;
@@ -98,10 +107,11 @@ FROM
 
 -- Prenumerationskälla
 SELECT 
-	DISTINCT(Prenumerationskälla), 
-	Prenumeranter 
+	"Prenumerationskälla", 
+	SUM(Prenumeranter) AS Totala_prenum 
 FROM 
-	prenumerationskalla.diagramdata;
+	prenumerationskalla.diagramdata
+GROUP BY "Prenumerationskälla";
 
 
 -- De tio senaste videorna

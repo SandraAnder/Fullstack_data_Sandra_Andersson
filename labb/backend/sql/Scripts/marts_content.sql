@@ -65,12 +65,14 @@ FROM
 
 
 CREATE TABLE IF NOT EXISTS marts.content_viewer_geografy AS (
-SELECT
-	Geografi,
-	COUNT(Geografi)
-FROM
-	geografi.diagramdata
-GROUP BY Geografi);
+SELECT 
+	Geografi, 
+	Visningar,
+	"Genomsnittlig visningslängd"
+FROM 
+	geografi.tabelldata
+ORDER BY 
+	"Visningar" DESC);
 
 CREATE TABLE IF NOT EXISTS marts.op_system_views AS (
 SELECT 
@@ -98,10 +100,11 @@ SELECT
 
 CREATE TABLE IF NOT EXISTS marts.subs_source AS (
 SELECT 
-	DISTINCT(Prenumerationskälla), 
-	Prenumeranter 
+	"Prenumerationskälla", 
+	SUM(Prenumeranter) AS Totala_prenum 
 FROM 
-	prenumerationskalla.diagramdata);
+	prenumerationskalla.diagramdata
+GROUP BY "Prenumerationskälla");
 
 
 CREATE TABLE IF NOT EXISTS marts.content_10_latest_vid AS (
