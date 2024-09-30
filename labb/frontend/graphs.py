@@ -23,8 +23,8 @@ class ViewsTrend:
         #st.plotly_chart(fig)
 
         fig.update_layout(
-        plot_bgcolor="rgba(243, 255, 236, 0.6)",
-        paper_bgcolor="rgba(243, 255, 236, 0)",
+        plot_bgcolor='rgba(0, 0, 0, 0)',
+        paper_bgcolor='rgba(0, 0, 0, 0)',
     )
 
         fig.update_traces(
@@ -58,8 +58,8 @@ class ViewsTrend:
             yaxis_title="Videotitel",
             xaxis_tickangle=0,  # Rotera x-ticks för bättre läsbarhet
             yaxis=dict(autorange="reversed"),  # Omvänd y-axel för att få den mest tittade videon högst upp
-            plot_bgcolor='#f3ffec',  # Ändra bakgrundsfärg för diagrammet till vit
-            paper_bgcolor='#f3ffec'  # Transparent bakgrund
+            plot_bgcolor='rgba(0, 0, 0, 0)',  # Ändra bakgrundsfärg för diagrammet till vit
+            paper_bgcolor='rgba(0, 0, 0, 0)'  # Transparent bakgrund
         )
         # Begränsar x-axelns maxvärde
         fig.update_xaxes(range=[0, 120])
@@ -83,8 +83,8 @@ class ViewsTrend:
             
         fig.update_layout(
             yaxis=dict(autorange="reversed"),  # Inverterar ordningen
-            plot_bgcolor='#f3ffec',  # Ändrar bakgrundsfärg
-            paper_bgcolor='#f3ffec')
+            plot_bgcolor='rgba(0, 0, 0, 0)',  # Ändrar bakgrundsfärg
+            paper_bgcolor='rgba(0, 0, 0, 0)')
         
         st.plotly_chart(fig, use_container_width=True)
 
@@ -167,7 +167,7 @@ class ViewsTrend:
             margin={"r": 0, "t": 40, "l": 0, "b": 0},
             height=500,  # Justera höjden på kartan
             plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent bakgrund för själva plotområdet
-            paper_bgcolor='#f3ffec',
+            paper_bgcolor='rgba(0, 0, 0, 0)',
             coloraxis_colorbar=dict(
             title="Totala Visningar",
             x=0.75,  # Adjust this value to move the colorbar closer to the map

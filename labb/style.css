@@ -38,39 +38,58 @@ body * + * {
     display: none;
 }
 
+
 h1, h2, h3 {
     color: var(--headingColor);
     font-family: "Noto Sans", sans-serif;
 }
+
 p {
     color: var(--paragraphColor);
     font-family: "Noto Sans", sans-serif;
 }
 
 h1 {
-    font-size: var(--s3);
+    font-size: calc(var(--s3) * 1.2); /* Öka storleken på huvudrubriken */
+    color: var(--primaryColor); /* Använd en primär färg för rubriken */
+    margin-top: 1rem; /* Justera marginalen ovanför rubriken */
+    margin-bottom: 1rem; /* Justera marginalen under rubriken */
+    text-align: center; /* Centrera rubriken */
+    padding: 0.5rem 1rem; /* Lägg till lite utrymme runt rubriken */
+    background-color: rgba(60, 116, 68, 0.05); /* Subtil bakgrundsfärg (justerbar) */
+    border-radius: 8px; /* Gör hörnen rundade */
+    box-shadow: 0px 2px 5px rgba(49, 122, 79, 0.473); /* Lägg till en subtil skugga */
 }
 
 h2 {
-    font-size: var(--s2);
+    font-size: var(--s2); /* Öka storleken för underrubriken */
+    color: var(--headingColor); /* Använd headingColor för underrubriken */
+    margin-top: 0.5rem; /* Justera marginalen ovanför underrubriken */
+    margin-bottom: 0.5rem; /* Justera marginalen under underrubriken */
+    /*text-align: center;  Centrera underrubriken */
+}
+h1 + p {
+    font-size: var(--s1); /* Gör beskrivningstexten större */
+    color: var(--paragraphColor); /* Använd färgen för paragraftext */
+    text-align: center; /* Centrera beskrivningen */
+    margin-top: 0; /* Justera marginalen ovanför beskrivningen */
+    margin-bottom: 1rem; /* Justera marginalen under beskrivningen */
 }
 
 h3 {
-    font-size: var(--s1);
-}
-
-p {
     font-size: var(--s0);
 }
+
 
 /* . to use class selector */
 
 .stAppViewBlockContainer {
-    background-color: var(--backgroundColor);
+    /*background-color: var(--backgroundColor);*/
+    background-image: linear-gradient(to bottom right, rgb(227, 255, 221) , rgb(213, 213, 252));
     padding-top: var(--s1);
     padding-left: var(--s3);
     padding-right: var(--s3);
-    max-width:95%; /* 110 characters width, also the width of my 'green' main section */ 
+    max-width:100%; /* 110 characters width, also the width of my 'green' main section */ 
 }
 
 /* Ändrar bakgrundsfärg och textfärg på selectboxar */
@@ -111,13 +130,84 @@ div[data-baseweb="select"]:focus-within {
     background-color: revert;
 }
 
+
 #MainMenu {visibility: visible;} /* Döljer hamburger-menyn */
 header {
     visibility: hidden; /*deploy knappen*/
     height: 0;
+    
 } /* Döljer sidhuvudet */
+
+
 
 /* Här ändras 'bakgrundsfärgen' till sidopanelen*/
 [data-testid="stSidebar"] {
-    background-color: #9ebd8d;
+    background-color: #8aa77b;
+}
+/* Gör radioknapparna mer som knappar */
+[data-testid="stSidebar"] label {
+    display: inline-block;
+    display: flex; /* Gör så att elementet fungerar som en flex-behållare */
+    align-items: center; /* Centrera innehållet lodrätt */
+    justify-content: center; /* Centrera innehållet horisontellt */
+    margin: 5px 0;
+    padding: 15px 15px;
+    width: 100%;
+    border: 1px solid #3d7951;
+    border-radius: 3px;
+    background-color: #549164;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Noto Sans", sans-serif;
+    size: 10px;
+    text-align: center;
+}
+
+[data-testid="stSidebar"] label:hover {
+    background-color: #bbc5ff;
+}
+/* För att säkerställa att 'Välj en sida' inte ser ut som en knapp */
+[data-testid="stSidebar"] > div:first-child {
+    margin-bottom: 20px; /* Lägg till lite avstånd om du vill ha det */
+    font-weight: bold; /* Gör den fet för att särskilja från knapparna */
+    color: #013151; /* Justera färgen om det behövs */
+    display: block; /* Se till att titeln är kvar som ett blockelement */
+}
+
+
+#media_player_1, #media_player_1 > div, #media_player_1 > div > iframe,
+#media_player_2, #media_player_2 > div, #media_player_2 > div > iframe {
+    background-color: transparent !important;
+    border-radius: 0.5px; /* Valfritt */
+    border: none !important;
+}
+
+iframe {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+
+/* Container för huvudrubriken och beskrivningen */
+.header-container {
+    padding: 1rem 2rem; /* Utrymme runtom */
+    background-color: rgba(243, 255, 236, 0.8); /* Liknande bakgrundsfärg med lite transparens */
+    border-radius: 8px; /* Gör hörnen rundade */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* En liten skugga för att framhäva sektionen */
+    margin-bottom: 1rem; /* Utrymme under boxen */
+    text-align: center; /* Centrera texten */
+}
+
+/* Gör huvudrubriken inom header-container större */
+.header-container h1 {
+    margin: 0; /* Ta bort extra marginaler */
+    color: var(--headingColor); /* Primär färg */
+}
+
+/* Stilar för beskrivningstexten inom header-container */
+.header-container p {
+    margin: 0.5rem 0 0; /* Litet mellanrum ovanför men ingen marginal nedanför */
+    font-size: var(--s1); /* Gör beskrivningstexten större */
+    color: var(--paragraphColor); /* Använd färgen för paragraftext */
 }
