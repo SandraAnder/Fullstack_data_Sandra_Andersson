@@ -40,18 +40,18 @@ body * + * {
 
 
 h1, h2, h3 {
-    color: var(--headingColor);
+    color: var(--headingColor) !important;
     font-family: "Noto Sans", sans-serif;
 }
 
 p {
-    color: var(--paragraphColor);
+    color: var(--paragraphColor) !important;
     font-family: "Noto Sans", sans-serif;
 }
 
 h1 {
     font-size: calc(var(--s3) * 1.2); /* Öka storleken på huvudrubriken */
-    color: var(--primaryColor); /* Använd en primär färg för rubriken */
+    color: var(--primaryColor) !important; /* Använd en primär färg för rubriken */
     margin-top: 1rem; /* Justera marginalen ovanför rubriken */
     margin-bottom: 1rem; /* Justera marginalen under rubriken */
     text-align: center; /* Centrera rubriken */
@@ -63,14 +63,14 @@ h1 {
 
 h2 {
     font-size: var(--s2); /* Öka storleken för underrubriken */
-    color: var(--headingColor); /* Använd headingColor för underrubriken */
+    color: var(--headingColor) !important; /* Använd headingColor för underrubriken */
     margin-top: 0.5rem; /* Justera marginalen ovanför underrubriken */
     margin-bottom: 0.5rem; /* Justera marginalen under underrubriken */
     /*text-align: center;  Centrera underrubriken */
 }
 h1 + p {
     font-size: var(--s1); /* Gör beskrivningstexten större */
-    color: var(--paragraphColor); /* Använd färgen för paragraftext */
+    color: var(--paragraphColor) !important; /* Använd färgen för paragraftext */
     text-align: center; /* Centrera beskrivningen */
     margin-top: 0; /* Justera marginalen ovanför beskrivningen */
     margin-bottom: 1rem; /* Justera marginalen under beskrivningen */
@@ -215,4 +215,20 @@ iframe {
     margin: 0.5rem 0 0; /* Litet mellanrum ovanför men inget nedanför */
     font-size: var(--s1); /* Gör beskrivningstexten större */
     color: var(--paragraphColor);
+}
+
+/* Ändra textfärg för Streamlit-huvudknappar */
+.stButton>button, .stRadio label, .stSidebarButton>button {
+    color: #013151 !important; 
+ }
+
+ /* Ändra färg på Streamlit-ikoner i sidhuvudet */
+.stToolbar button, .stToolbar svg {
+    fill: #013151 !important; /* Din önskade ikonfärg */
+}
+
+/* Ändra text- och bakgrundsfärg för hamburger-menyn */
+[data-testid="stHeader"] {
+    color: #013151 !important;  /* Textfärg */
+    background-color: transparent !important; /* Gör bakgrunden transparent */
 }
