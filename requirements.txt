@@ -2,3 +2,5 @@ duckdb
 streamlit
 pandas
 plotly
+pycountry
+altair
