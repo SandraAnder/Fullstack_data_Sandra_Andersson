@@ -31,8 +31,6 @@ recent_10 = Most_recent_10()
 recent_10_plot = ViewsTrend()
 
 def layout():
-    
-    alt.themes.enable("dark") # OBS det ser bonkers ut i darkmode
 
     st.markdown("""
     <div class="header-container">
@@ -40,11 +38,6 @@ def layout():
         <p>Den här dashboarden syftar till att utforska datan i min youtubekanal</p>
     </div>
     """, unsafe_allow_html=True)
-
-
-    #st.markdown("# The data driven youtuber 📹👑")
-    #st.markdown("Den här dashboarden syftar till att utforska datan i min youtubekanal")
-
 
     # Skapar en meny i sidofältet till vänster
     st.sidebar.title("Meny")
@@ -87,7 +80,7 @@ def layout():
                     url="https://www.youtube.com/watch?v=i454nHjdMAc&ab_channel=AIgineer",
                     controls=True, 
                     width="100%",  # Låt spelaren ta upp hela bredden
-                    height="400px",  # Sätt höjden för att säkerställa proportionerna
+                    height="400px",  # höjden 
                     frameborder="0"
                 )
 
@@ -98,8 +91,8 @@ def layout():
                     url="https://www.youtube.com/watch?v=2vvHu06wM4g&t=763s&ab_channel=AIgineer", 
                     # TESTA ÄVEN DENNA KOKCHUN :D, url="https://www.youtube.com/watch?v=iik25wqIuFo", 
                     controls=True,
-                    width="100%",  # Låt spelaren ta upp hela bredden
-                    height="400px",  # Sätt höjden för att säkerställa proportionerna
+                    width="100%",
+                    height="400px",
                 )
 
         recent_10_plot.recent_10_plot()

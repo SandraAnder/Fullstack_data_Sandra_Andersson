@@ -131,12 +131,17 @@ div[data-baseweb="select"]:focus-within {
 }
 
 
-#MainMenu {visibility: visible;} /* Döljer hamburger-menyn */
+#MainMenu {visibility: visible;} /* hamburger-menyn */
 header {
-    visibility: hidden; /*deploy knappen*/
+    visibility: visible; /*deploy knappen*/
     height: 0;
-    
-} /* Döljer sidhuvudet */
+    background: none !important;
+    background-color: transparent !important;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
 
 
 
@@ -147,7 +152,7 @@ header {
 /* Gör radioknapparna mer som knappar */
 [data-testid="stSidebar"] label {
     display: inline-block;
-    display: flex; /* Gör så att elementet fungerar som en flex-behållare */
+    display: flex;
     align-items: center; /* Centrera innehållet lodrätt */
     justify-content: center; /* Centrera innehållet horisontellt */
     margin: 5px 0;
@@ -167,11 +172,11 @@ header {
 [data-testid="stSidebar"] label:hover {
     background-color: #bbc5ff;
 }
-/* För att säkerställa att 'Välj en sida' inte ser ut som en knapp */
+
 [data-testid="stSidebar"] > div:first-child {
-    margin-bottom: 20px; /* Lägg till lite avstånd om du vill ha det */
+    margin-bottom: 20px;
     font-weight: bold; /* Gör den fet för att särskilja från knapparna */
-    color: #013151; /* Justera färgen om det behövs */
+    color: #013151;
     display: block; /* Se till att titeln är kvar som ett blockelement */
 }
 
@@ -179,7 +184,7 @@ header {
 #media_player_1, #media_player_1 > div, #media_player_1 > div > iframe,
 #media_player_2, #media_player_2 > div, #media_player_2 > div > iframe {
     background-color: transparent !important;
-    border-radius: 0.5px; /* Valfritt */
+    border-radius: 0.5px;
     border: none !important;
 }
 
@@ -202,12 +207,12 @@ iframe {
 /* Gör huvudrubriken inom header-container större */
 .header-container h1 {
     margin: 0; /* Ta bort extra marginaler */
-    color: var(--headingColor); /* Primär färg */
+    color: var(--headingColor);
 }
 
 /* Stilar för beskrivningstexten inom header-container */
 .header-container p {
-    margin: 0.5rem 0 0; /* Litet mellanrum ovanför men ingen marginal nedanför */
+    margin: 0.5rem 0 0; /* Litet mellanrum ovanför men inget nedanför */
     font-size: var(--s1); /* Gör beskrivningstexten större */
-    color: var(--paragraphColor); /* Använd färgen för paragraftext */
+    color: var(--paragraphColor);
 }
