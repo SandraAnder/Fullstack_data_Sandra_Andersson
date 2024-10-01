@@ -22,7 +22,7 @@
     --backgroundColorsecondary: #f3ffec;
 
     --headingColor: #013151; /* Färg för rubriker */
-    --paragraphColor: #4a4a4a; /* Färg för brödtext */
+    --paragraphColor: #464646; /* Färg för brödtext */
 }
 
 /* lobotomized owl - 
@@ -35,7 +35,11 @@ body * + * {
 
 /* finds selector on attribute level */
 [data-testid|="stheader"]{
-    display: none;
+    display: box;
+    fill: #013151 !important; /* Ändra till den färg du vill använda */
+    color: #013151 !important; 
+    opacity: 1 !important; /* Se till att ikonen är fullt synlig */
+
 }
 
 
@@ -51,7 +55,7 @@ p {
 
 h1 {
     font-size: calc(var(--s3) * 1.2); /* Öka storleken på huvudrubriken */
-    color: var(--primaryColor) !important; /* Använd en primär färg för rubriken */
+    color: var(--primaryColor) !important;
     margin-top: 1rem; /* Justera marginalen ovanför rubriken */
     margin-bottom: 1rem; /* Justera marginalen under rubriken */
     text-align: center; /* Centrera rubriken */
@@ -78,6 +82,7 @@ h1 + p {
 
 h3 {
     font-size: var(--s0);
+    color: var(--paragraphColor) !important;
 }
 
 
@@ -227,8 +232,13 @@ iframe {
     fill: #013151 !important; /* Din önskade ikonfärg */
 }
 
-/* Ändra text- och bakgrundsfärg för hamburger-menyn */
-[data-testid="stHeader"] {
-    color: #013151 !important;  /* Textfärg */
-    background-color: transparent !important; /* Gör bakgrunden transparent */
+[data-testid="stHeader"] button {
+    color: #013151 !important;  /* Använd din primära textfärg */
+    fill: #013151 !important;   /* Använd din primära färg för ikoner */
+}
+
+/* Justera bakgrundsfärg och hover för bättre kontrast */
+[data-testid="stHeader"] button:hover {
+    background-color: #f3ffec !important; /* Sätt bakgrundsfärgen när man hovrar */
+    color: #013151 !important; /* Gör så att texten syns tydligt */
 }
