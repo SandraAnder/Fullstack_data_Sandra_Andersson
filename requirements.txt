@@ -1,5 +1,7 @@
 duckdb
 streamlit
+streamlit_elements
+streamlit_extras
 pandas
 plotly
 pycountry
