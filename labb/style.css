@@ -107,7 +107,7 @@ h3 {
     padding-top: var(--s1);
     padding-left: var(--s3);
     padding-right: var(--s3);
-    max-width:100%; /* 110 characters width, also the width of my 'green' main section */ 
+    max-width:100%; /* 110 characters bredd, bredden på den 'gröna' main sektionen */ 
 }
 
 /* Ändrar bakgrundsfärg och textfärg på selectboxar */
@@ -120,9 +120,9 @@ div[data-baseweb="select"] > div {
     font-family: "Noto Sans", sans-serif !important;
     font-size: 16px !important;
     height: auto !important; /* anpassar sig till höjden*/
-    max-width: 300px !important;  /* Set your desired width */
-    width: auto !important;       /* Adjust the width automatically */
-    line-height: 1.5 !important; /* Justerar line-height för bättre textvisning */
+    max-width: 300px !important;
+    width: auto !important; 
+    line-height: 1.5 !important; 
     display: flex; /* centrering av elementet */
     align-items: center; /* Centrerar texten vertikalt */
 }
@@ -132,13 +132,13 @@ div[data-baseweb="select"] > div > div {
 }
 
 
-/* Ändra utseendet när selectboxen är i fokus */
+/* Ändrar utseendet när selectboxen är i fokus */
 div[data-baseweb="select"]:focus-within {
     outline: none !important;
-    border: 1px solid #009688 !important; /* Ändra färg för kantlinjen vid fokus */
+    border: 1px solid #009688 !important; /* Ändrar färg för kantlinjen vid fokus */
     box-shadow: 0 0 5px #009688 !important; /* En liten skuggeffekt vid fokus */
     height: auto !important; /* anpassar sig till höjden*/
-    max-width: 300px !important;  /* Set your desired width */
+    max-width: 300px !important;
     width: auto !important;
 }
 
@@ -170,8 +170,8 @@ header {
 [data-testid="stSidebar"] label {
     display: inline-block;
     display: flex;
-    align-items: center; /* Centrera innehållet lodrätt */
-    justify-content: center; /* Centrera innehållet horisontellt */
+    align-items: center; /* Centrerar innehållet lodrätt */
+    justify-content: center; /* Centrerar innehållet horisontellt */
     margin: 5px 0;
     padding: 15px 15px;
     width: 100%;
@@ -194,7 +194,7 @@ header {
     margin-bottom: 20px;
     font-weight: bold; /* Gör den fet för att särskilja från knapparna */
     color: #013151;
-    display: block; /* Se till att titeln är kvar som ett blockelement */
+    display: block; /* Ser till att titeln är kvar som ett blockelement */
 }
 
 
@@ -213,12 +213,12 @@ iframe {
 
 /* Container för huvudrubriken och beskrivningen */
 .header-container {
-    padding: 1rem 2rem; /* Utrymme runtom */
+    padding: 1rem 2rem; /* Utrymmet runtom */
     background-color: rgba(243, 255, 236, 0.8); /* Liknande bakgrundsfärg med lite transparens */
     border-radius: 8px; /* Gör hörnen rundade */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* En liten skugga för att framhäva sektionen */
     margin-bottom: 1rem; /* Utrymme under boxen */
-    text-align: center; /* Centrera texten */
+    text-align: center; /* Centrerar texten */
 }
 
 /* Gör huvudrubriken inom header-container större */
@@ -235,31 +235,31 @@ iframe {
     color: var(--paragraphColor);
 }
 
-/* Ändra textfärg för Streamlit-huvudknappar */
+/* Ändrar textfärg för Streamlit-huvudknappar */
 .stButton>button, .stRadio label, .stSidebarButton>button {
     color: #013151 !important; 
  }
- /* Förbättra marginaler och paddings runt radio-knappar */
+ /* Förbättrar marginaler och paddings runt radio-knappar */
 .stRadio > div {
-    margin-top: 0 !important;  /* Ta bort övre marginal */
-    padding-top: 0 !important; /* Ta bort eventuell övre padding */
+    margin-top: 0 !important;  /* Tar bort övre marginal */
+    padding-top: 0 !important; /* Tar bort eventuell övre padding */
 }
 .stRadio > div:first-child label {
     display: none;  /* Gömmer den första labeln */
 }
 
- /* Ändra färg på Streamlit-ikoner i sidhuvudet */
+ /* Ändrar färg på Streamlit-ikoner i sidhuvudet */
 .stToolbar button, .stToolbar svg {
-    fill: #013151 !important; /* Din önskade ikonfärg */
+    fill: #013151 !important; /* ikonfärgen */
 }
 
 [data-testid="stHeader"] button {
-    color: #013151 !important;  /* Använd din primära textfärg */
-    fill: #013151 !important;   /* Använd din primära färg för ikoner */
+    color: #013151 !important;
+    fill: #013151 !important;
 }
 
-/* Justera bakgrundsfärg och hover för bättre kontrast */
+/* Justerar bakgrundsfärg och hover för bättre kontrast */
 [data-testid="stHeader"] button:hover {
-    background-color: #f3ffec !important; /* Sätt bakgrundsfärgen när man hovrar */
-    color: #013151 !important; /* Gör så att texten syns tydligt */
+    background-color: #f3ffec !important;
+    color: #013151 !important;
 }

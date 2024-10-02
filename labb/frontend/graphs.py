@@ -27,7 +27,6 @@ class ViewsTrend:
     def display_plot(self):
         fig = px.line(self.df, x="Datum", y="Visningar")
         st.markdown("## Antal visningar under senaste månaden")
-        # st.plotly_chart(fig)
 
         fig.update_layout(
             plot_bgcolor='rgba(0, 0, 0, 0)',
@@ -50,22 +49,20 @@ class ViewsTrend:
             self.content_top15.iloc[1:].head(15),
             y='Titel',
             x='Antal_visningar',
-            # title='Top 15 mest tittade videor',
             labels={'Antal_visningar': 'Visningar', 'Titel': 'Videotitel'},
             color='Antal_visningar',  # Färg baserat på visningsantal
             color_discrete_sequence=px.colors.qualitative.Plotly,  # Färgpalett för staplarna
-            height=600,  # Höjd på grafen
+            height=600,
             orientation='h',  # Gör stapeldiagrammet liggande,
             range_color=[0, 120]  # Sätter intervall för färgskalan till 0-120
         )
-        # Anpassa layouten på grafen
+        # Anpassar layouten på grafen
         fig.update_layout(
             xaxis_title="Antal visningar",
             yaxis_title="Videotitel",
             xaxis_tickangle=0,  # Rotera x-ticks för bättre läsbarhet
             # Omvänd y-axel för att få den mest tittade videon högst upp
             yaxis=dict(autorange="reversed"),
-            # Ändra bakgrundsfärg för diagrammet till vit
             plot_bgcolor='rgba(0, 0, 0, 0)',
             paper_bgcolor='rgba(0, 0, 0, 0)'  # Transparent bakgrund
         )
@@ -82,7 +79,6 @@ class ViewsTrend:
             x="totala_visningar",
             y="Videotitel",
             orientation='h',
-            # labels={"totala_visningar": "Totala Visningar", "Videotitel": "Titel"}
             labels={"totala_visningar": "", "Videotitel": ""},
             title="Totala visningar av de 10 senast uppladdade videorna",
             color="totala_visningar",
@@ -91,7 +87,7 @@ class ViewsTrend:
 
         fig.update_layout(
             yaxis=dict(autorange="reversed"),  # Inverterar ordningen
-            plot_bgcolor='rgba(0, 0, 0, 0)',  # Ändrar bakgrundsfärg
+            plot_bgcolor='rgba(0, 0, 0, 0)',
             paper_bgcolor='rgba(0, 0, 0, 0)')
 
         st.plotly_chart(fig, use_container_width=True)
@@ -100,8 +96,6 @@ class ViewsTrend:
         # Tar bort sista raden och sorterar DataFramen efter antalet visningar i fallande ordning
         op_sys_df = self._op_sys[:-1].sort_values(
             by="Totala_visningar", ascending=True).reset_index(drop=True)
-
-        # st.markdown("## Vilka operativsystem är vanligast")
 
         fig = px.bar(
             op_sys_df,
@@ -136,7 +130,6 @@ class ViewsTrend:
 
         geog_df['Geografi_ISO3'] = geog_df['Geografi'].apply(convert_to_iso3)
 
-        # Filter out rows where conversion failed
         geog_df = geog_df.dropna(subset=['Geografi_ISO3'])
 
         # choropleth ger oss vår vackra karta
@@ -156,9 +149,9 @@ class ViewsTrend:
         fig.update_layout(
             title={
                 'text': "Visningar per land",
-                'x': 0.5,  # 0 is left, 1 is right
-                'xanchor': 'center',  # Anchors the title in the center
-                'yanchor': 'top'  # Positioning from top
+                'x': 0.5,  # 0 vänste, 1 höger
+                'xanchor': 'center',  # Centrerar titel
+                'yanchor': 'top'
             },
 
             geo=dict(
@@ -174,13 +167,13 @@ class ViewsTrend:
                 lonaxis_range=[-20, 40]
             ),
             margin={"r": 0, "t": 40, "l": 0, "b": 0},
-            height=500,  # Justera höjden på kartan
+            height=500,
             # Transparent bakgrund för själva plotområdet
             plot_bgcolor='rgba(0, 0, 0, 0)',
             paper_bgcolor='rgba(0, 0, 0, 0)',
             coloraxis_colorbar=dict(
                 title="Totala Visningar",
-                x=0.85,  # Adjust this value to move the colorbar closer to the map
+                x=0.85,  # Färgbaren flyttas här. 0 vänster -  1.0 höger
                 xanchor='left')
 
         )

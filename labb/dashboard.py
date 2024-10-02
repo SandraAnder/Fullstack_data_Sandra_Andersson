@@ -45,15 +45,6 @@ def layout():
         label="Välj sida",
         options=["Översikt", "Tittare", "Videor", "Tekniskt"])
 
-    # if st.sidebar.button("Översikt"):
-    #     page = "Översikt"
-    # elif st.sidebar.button("Tittare"):
-    #     page = "Tittare"
-    # elif st.sidebar.button("Videor"):
-    #     page = "Videor"
-    # elif st.sidebar.button("Tekniskt"):
-    #     page = "Tekniskt"
-
     # Sida 1
     if page == "Översikt":
         st.markdown("## KPIer för videor")
