@@ -22,7 +22,21 @@
     --backgroundColorsecondary: #f3ffec;
 
     --headingColor: #013151; /* Färg för rubriker */
-    --paragraphColor: #464646; /* Färg för brödtext */
+    --paragraphColor: #414141; /* Färg för brödtext */
+    --textColor: #323232;
+    --sidebarColor: #8aa77b;
+}
+@media (prefers-color-scheme: dark), (prefers-color-scheme: light) {
+    :root {
+        /* Samma färger oavsett dark eller light mode */
+        --primaryColor: #013151;
+        --backgroundColor: #f3ffec;
+        --backgroundColorsecondary: #f3ffec;
+        --headingColor: #013151;
+        --paragraphColor: #4a4a4a;
+        --textColor: #323232;
+        --sidebarColor: #8aa77b;
+    }
 }
 
 /* lobotomized owl - 
@@ -89,7 +103,6 @@ h3 {
 /* . to use class selector */
 
 .stAppViewBlockContainer {
-    /*background-color: var(--backgroundColor);*/
     background-image: linear-gradient(to bottom right, rgb(227, 255, 221) , rgb(213, 213, 252));
     padding-top: var(--s1);
     padding-left: var(--s3);
@@ -128,7 +141,6 @@ div[data-baseweb="select"]:focus-within {
     max-width: 300px !important;  /* Set your desired width */
     width: auto !important;
 }
-
 
 
 [data-testid|="stVerticalBlockBorderWrapper"] * {
@@ -211,7 +223,8 @@ iframe {
 
 /* Gör huvudrubriken inom header-container större */
 .header-container h1 {
-    margin: 0; /* Ta bort extra marginaler */
+    margin: 0;
+    font-size: var(--s3);
     color: var(--headingColor);
 }
 
@@ -226,6 +239,14 @@ iframe {
 .stButton>button, .stRadio label, .stSidebarButton>button {
     color: #013151 !important; 
  }
+ /* Förbättra marginaler och paddings runt radio-knappar */
+.stRadio > div {
+    margin-top: 0 !important;  /* Ta bort övre marginal */
+    padding-top: 0 !important; /* Ta bort eventuell övre padding */
+}
+.stRadio > div:first-child label {
+    display: none;  /* Gömmer den första labeln */
+}
 
  /* Ändra färg på Streamlit-ikoner i sidhuvudet */
 .stToolbar button, .stToolbar svg {

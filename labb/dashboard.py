@@ -1,4 +1,4 @@
-import streamlit as st 
+import streamlit as st
 from pathlib import Path
 from frontend.kpi import ContentKPI, AgeGenderKPI, Viewer_geog, Op_system_views, Subs, Subs_source, Most_recent_10
 from frontend.graphs import ViewsTrend
@@ -7,14 +7,13 @@ import altair as alt
 from streamlit_elements import elements, media
 from streamlit_extras.let_it_rain import rain
 
-# pip install streamlit-elements==0.1.*
 
 st.set_page_config(
-    page_title="The data driven youtuber", # Titel på browserfliken
-    page_icon="🦜", # Icon på browserfliken
-    layout="wide", # Ger en fullskärms upplevelse
-    initial_sidebar_state="expanded") # Sidebaren startar i utfällt läge
-
+    page_title="The data driven youtuber",  # Titel på browserfliken
+    page_icon="🦜",  # Icon på browserfliken
+    layout="wide",  # Ger en fullskärms upplevelse
+    initial_sidebar_state="expanded",  # Sidebaren startar i utfällt läge
+)
 
 
 content_kpi = ContentKPI()
@@ -30,6 +29,7 @@ subs_source = Subs_source()
 recent_10 = Most_recent_10()
 recent_10_plot = ViewsTrend()
 
+
 def layout():
 
     st.markdown("""
@@ -41,7 +41,18 @@ def layout():
 
     # Skapar en meny i sidofältet till vänster
     st.sidebar.title("Meny")
-    page = st.sidebar.radio("Välj en sida", ("Översikt", "Tittare", "Videor", "Tekniskt"))
+    page = st.sidebar.radio(
+        label="Välj sida",
+        options=["Översikt", "Tittare", "Videor", "Tekniskt"])
+
+    # if st.sidebar.button("Översikt"):
+    #     page = "Översikt"
+    # elif st.sidebar.button("Tittare"):
+    #     page = "Tittare"
+    # elif st.sidebar.button("Videor"):
+    #     page = "Videor"
+    # elif st.sidebar.button("Tekniskt"):
+    #     page = "Tekniskt"
 
     # Sida 1
     if page == "Översikt":
@@ -78,9 +89,9 @@ def layout():
             with elements("media_player_1"):
                 media.Player(
                     url="https://www.youtube.com/watch?v=i454nHjdMAc&ab_channel=AIgineer",
-                    controls=True, 
+                    controls=True,
                     width="100%",  # Låt spelaren ta upp hela bredden
-                    height="400px",  # höjden 
+                    height="400px",  # höjden
                     frameborder="0"
                 )
 
@@ -88,8 +99,8 @@ def layout():
             st.markdown("### Senaste Videon")
             with elements("media_player_2"):
                 media.Player(
-                    url="https://www.youtube.com/watch?v=2vvHu06wM4g&t=763s&ab_channel=AIgineer", 
-                    # TESTA ÄVEN DENNA KOKCHUN :D, url="https://www.youtube.com/watch?v=iik25wqIuFo", 
+                    url="https://www.youtube.com/watch?v=2vvHu06wM4g&t=763s&ab_channel=AIgineer",
+                    # TESTA ÄVEN DENNA ;) - url="https://www.youtube.com/watch?v=iik25wqIuFo",
                     controls=True,
                     width="100%",
                     height="400px",
@@ -97,7 +108,7 @@ def layout():
 
         recent_10_plot.recent_10_plot()
         recent_10.display_recent_10()
-        
+
     # sida 4
     elif page == "Tekniskt":
         st.header("Statistik")
@@ -115,6 +126,7 @@ def read_css():
         st.markdown(
             f'<style>{css.read()}</style>', unsafe_allow_html=True
         )
+
 
 if __name__ == "__main__":
     layout()
