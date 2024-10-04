@@ -38,26 +38,26 @@ body * + * {
 /* finds selector on attribute level */
 [data-testid|="stheader"]{
     display: box;
-    fill: #013151 !important; /* Ändra till den färg du vill använda */
-    color: #013151 !important; 
-    opacity: 1 !important; /* Se till att ikonen är fullt synlig */
+    fill: #013151; /* Ändra till den färg du vill använda */
+    color: #013151; 
+    opacity: 1; /* Se till att ikonen är fullt synlig */
 
 }
 
 
 h1, h2, h3 {
-    color: var(--headingColor) !important;
+    color: var(--headingColor);
     font-family: "Noto Sans", sans-serif;
 }
 
 p {
-    color: var(--paragraphColor) !important;
+    color: var(--paragraphColor);
     font-family: "Noto Sans", sans-serif;
 }
 
 h1 {
     font-size: calc(var(--s3) * 1.2); /* Öka storleken på huvudrubriken */
-    color: var(--primaryColor) !important;
+    color: var(--primaryColor);
     margin-top: 1rem; /* Justera marginalen ovanför rubriken */
     margin-bottom: 1rem; /* Justera marginalen under rubriken */
     text-align: center; /* Centrera rubriken */
@@ -69,14 +69,14 @@ h1 {
 
 h2 {
     font-size: var(--s2); /* Öka storleken för underrubriken */
-    color: var(--headingColor) !important; /* Använd headingColor för underrubriken */
+    color: var(--headingColor); /* Använd headingColor för underrubriken */
     margin-top: 0.5rem; /* Justera marginalen ovanför underrubriken */
     margin-bottom: 0.5rem; /* Justera marginalen under underrubriken */
     /*text-align: center;  Centrera underrubriken */
 }
 h1 + p {
     font-size: var(--s1); /* Gör beskrivningstexten större */
-    color: var(--paragraphColor) !important; /* Använd färgen för paragraftext */
+    color: var(--paragraphColor); /* Använd färgen för paragraftext */
     text-align: center; /* Centrera beskrivningen */
     margin-top: 0; /* Justera marginalen ovanför beskrivningen */
     margin-bottom: 1rem; /* Justera marginalen under beskrivningen */
@@ -84,7 +84,7 @@ h1 + p {
 
 h3 {
     font-size: var(--s0);
-    color: var(--paragraphColor) !important;
+    color: var(--paragraphColor);
 }
 
 
@@ -100,34 +100,34 @@ h3 {
 
 /* Ändrar bakgrundsfärg och textfärg på selectboxar */
 div[data-baseweb="select"] > div {
-    background-color: #ffffff !important; /* Bakgrundsfärg */
-    color: #013151 !important; /* Textfärg */
-    border: 1px solid #003253 !important; /* Kantfärg */
-    padding: 3px !important;
-    border-radius: 5px !important; /* Rundade hörn */
-    font-family: "Noto Sans", sans-serif !important;
-    font-size: 16px !important;
-    height: auto !important; /* anpassar sig till höjden*/
-    max-width: 300px !important;
-    width: auto !important; 
-    line-height: 1.5 !important; 
+    background-color: #ffffff; /* Bakgrundsfärg */
+    color: #013151; /* Textfärg */
+    border: 1px solid #003253; /* Kantfärg */
+    padding: 3px;
+    border-radius: 5px; /* Rundade hörn */
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    height: auto; /* anpassar sig till höjden*/
+    max-width: 300px;
+    width: auto; 
+    line-height: 1.5; 
     display: flex; /* centrering av elementet */
     align-items: center; /* Centrerar texten vertikalt */
 }
 
 div[data-baseweb="select"] > div > div {
-    color: #013151 !important; /* Textfärg i selectboxen */
+    color: #013151; /* Textfärg i selectboxen */
 }
 
 
 /* Ändrar utseendet när selectboxen är i fokus */
 div[data-baseweb="select"]:focus-within {
-    outline: none !important;
-    border: 1px solid #009688 !important; /* Ändrar färg för kantlinjen vid fokus */
-    box-shadow: 0 0 5px #009688 !important; /* En liten skuggeffekt vid fokus */
-    height: auto !important; /* anpassar sig till höjden*/
-    max-width: 300px !important;
-    width: auto !important;
+    outline: none;
+    border: 1px solid #009688; /* Ändrar färg för kantlinjen vid fokus */
+    box-shadow: 0 0 5px #009688; /* En liten skuggeffekt vid fokus */
+    height: auto; /* anpassar sig till höjden*/
+    max-width: 300px;
+    width: auto;
 }
 
 

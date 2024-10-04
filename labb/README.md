@@ -16,7 +16,7 @@ Några exempel på sådan som gjorts i denna labben är:
 - Prenumeranter och källa
 
 ### marts_content.sql
-Här görs vår koppling mellan databasen och dashboard. Vi skapar nya tabeller (om de inte redan finns) i marts som vi sedan kan koppla ihop med våra KPI:er
+Här görs vår koppling mellan databasen och dashboard. Vi skapar nya tabeller (om de inte redan finns) i marts som vi sedan kan koppla ihop med våra KPI:er/grafer
 
 ### graphs.py
 Alla grafer finns här enkelt att anropa
