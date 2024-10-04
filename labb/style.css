@@ -26,18 +26,6 @@
     --textColor: #323232;
     --sidebarColor: #8aa77b;
 }
-@media (prefers-color-scheme: dark), (prefers-color-scheme: light) {
-    :root {
-        /* Samma färger oavsett dark eller light mode */
-        --primaryColor: #013151;
-        --backgroundColor: #f3ffec;
-        --backgroundColorsecondary: #f3ffec;
-        --headingColor: #013151;
-        --paragraphColor: #4a4a4a;
-        --textColor: #323232;
-        --sidebarColor: #8aa77b;
-    }
-}
 
 /* lobotomized owl - 
 selector looks for children of body with another sibling */
