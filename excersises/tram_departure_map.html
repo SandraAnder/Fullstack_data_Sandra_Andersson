@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3921d8dc101ea14bf05f40e414b31328 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3921d8dc101ea14bf05f40e414b31328" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3921d8dc101ea14bf05f40e414b31328 = L.map(
+                "map_3921d8dc101ea14bf05f40e414b31328",
+                {
+                    center: [5.7708895e-05, 1.1973478999999999e-05],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 14,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_995019bc4025e77e78d8fd7941a94834 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_995019bc4025e77e78d8fd7941a94834.addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var marker_4c89cc1d1637f95f5c0a6c261999fd98 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_ced13d655439c8329f2ed861dadc341d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4c89cc1d1637f95f5c0a6c261999fd98.setIcon(icon_ced13d655439c8329f2ed861dadc341d);
+        
+    
+        var popup_59b3cf3fbd6fcd6e2b8fa49ebee42edf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d243de973405b9363c5df962dd159de6 = $(`<div id="html_d243de973405b9363c5df962dd159de6" style="width: 100.0%; height: 100.0%;">Destination: Kortedala Aprilgatan (Göteborg kn)<br>Tid: 15:44:00</div>`)[0];
+                popup_59b3cf3fbd6fcd6e2b8fa49ebee42edf.setContent(html_d243de973405b9363c5df962dd159de6);
+            
+        
+
+        marker_4c89cc1d1637f95f5c0a6c261999fd98.bindPopup(popup_59b3cf3fbd6fcd6e2b8fa49ebee42edf)
+        ;
+
+        
+    
+    
+            var marker_283560f15537c92f11ab2d37e9b251a2 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_942ac55bfeca628edb38f4ea50d14219 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_283560f15537c92f11ab2d37e9b251a2.setIcon(icon_942ac55bfeca628edb38f4ea50d14219);
+        
+    
+        var popup_1fd0b8236c2faef0281c7753cb0b551a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5cfe80f25272ff318b6d92582585c9b = $(`<div id="html_b5cfe80f25272ff318b6d92582585c9b" style="width: 100.0%; height: 100.0%;">Destination: Kortedala Aprilgatan (Göteborg kn)<br>Tid: 15:52:00</div>`)[0];
+                popup_1fd0b8236c2faef0281c7753cb0b551a.setContent(html_b5cfe80f25272ff318b6d92582585c9b);
+            
+        
+
+        marker_283560f15537c92f11ab2d37e9b251a2.bindPopup(popup_1fd0b8236c2faef0281c7753cb0b551a)
+        ;
+
+        
+    
+    
+            var marker_e0c781ff62c7dd251454103db8bb0bde = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_282b1a779458ecc54a61034928cf0a73 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e0c781ff62c7dd251454103db8bb0bde.setIcon(icon_282b1a779458ecc54a61034928cf0a73);
+        
+    
+        var popup_39172b97e6357a662317a7c513a1ed48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_326cca8d6b256c1797461ae718459eb0 = $(`<div id="html_326cca8d6b256c1797461ae718459eb0" style="width: 100.0%; height: 100.0%;">Destination: Göteborg Varmfrontsgatan<br>Tid: 15:53:00</div>`)[0];
+                popup_39172b97e6357a662317a7c513a1ed48.setContent(html_326cca8d6b256c1797461ae718459eb0);
+            
+        
+
+        marker_e0c781ff62c7dd251454103db8bb0bde.bindPopup(popup_39172b97e6357a662317a7c513a1ed48)
+        ;
+
+        
+    
+    
+            var marker_047c215ad95e8b84b958bda6c054d1a1 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_f163087d4a568002826e5624ffe5083c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_047c215ad95e8b84b958bda6c054d1a1.setIcon(icon_f163087d4a568002826e5624ffe5083c);
+        
+    
+        var popup_6498b1da36dcce4f595fd9bd93727652 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6944745d0d8f4487886fe1a8f9aa99e8 = $(`<div id="html_6944745d0d8f4487886fe1a8f9aa99e8" style="width: 100.0%; height: 100.0%;">Destination: Kortedala Aprilgatan (Göteborg kn)<br>Tid: 16:01:00</div>`)[0];
+                popup_6498b1da36dcce4f595fd9bd93727652.setContent(html_6944745d0d8f4487886fe1a8f9aa99e8);
+            
+        
+
+        marker_047c215ad95e8b84b958bda6c054d1a1.bindPopup(popup_6498b1da36dcce4f595fd9bd93727652)
+        ;
+
+        
+    
+    
+            var marker_64820811dfc165b84fc2ec5a80b9b206 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_9f012a024f353358f908b7e787359575 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_64820811dfc165b84fc2ec5a80b9b206.setIcon(icon_9f012a024f353358f908b7e787359575);
+        
+    
+        var popup_007bf437c0a994fdb91f5b4d11946fff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8bdb5ab5b2f2bd9574d1a7719a27f58 = $(`<div id="html_b8bdb5ab5b2f2bd9574d1a7719a27f58" style="width: 100.0%; height: 100.0%;">Destination: Göteborg Varmfrontsgatan<br>Tid: 16:03:00</div>`)[0];
+                popup_007bf437c0a994fdb91f5b4d11946fff.setContent(html_b8bdb5ab5b2f2bd9574d1a7719a27f58);
+            
+        
+
+        marker_64820811dfc165b84fc2ec5a80b9b206.bindPopup(popup_007bf437c0a994fdb91f5b4d11946fff)
+        ;
+
+        
+    
+    
+            var marker_219759439025153afab863839ea5dc0d = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_124989f7710fd7656fcfe244c18847ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_219759439025153afab863839ea5dc0d.setIcon(icon_124989f7710fd7656fcfe244c18847ee);
+        
+    
+        var popup_b63e2f2be3376a9218b43b8aa5065db8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c63d6d59f39653f2bb84e9dd99046edc = $(`<div id="html_c63d6d59f39653f2bb84e9dd99046edc" style="width: 100.0%; height: 100.0%;">Destination: Kortedala Aprilgatan (Göteborg kn)<br>Tid: 16:09:00</div>`)[0];
+                popup_b63e2f2be3376a9218b43b8aa5065db8.setContent(html_c63d6d59f39653f2bb84e9dd99046edc);
+            
+        
+
+        marker_219759439025153afab863839ea5dc0d.bindPopup(popup_b63e2f2be3376a9218b43b8aa5065db8)
+        ;
+
+        
+    
+    
+            var marker_fc697d24a784a44389912db59f05d9d3 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_b75a756ab306245cd73e04f2b17f8133 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_fc697d24a784a44389912db59f05d9d3.setIcon(icon_b75a756ab306245cd73e04f2b17f8133);
+        
+    
+        var popup_014bcfacb44ebfaf651966678776a882 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_050d30e68a8eaeddbe36854b65043348 = $(`<div id="html_050d30e68a8eaeddbe36854b65043348" style="width: 100.0%; height: 100.0%;">Destination: Göteborg Varmfrontsgatan<br>Tid: 16:14:00</div>`)[0];
+                popup_014bcfacb44ebfaf651966678776a882.setContent(html_050d30e68a8eaeddbe36854b65043348);
+            
+        
+
+        marker_fc697d24a784a44389912db59f05d9d3.bindPopup(popup_014bcfacb44ebfaf651966678776a882)
+        ;
+
+        
+    
+    
+            var marker_6b17860aa1227db53b0eb660a1b5bfdb = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_797cec03a5ee4f7446b77881936c585a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_6b17860aa1227db53b0eb660a1b5bfdb.setIcon(icon_797cec03a5ee4f7446b77881936c585a);
+        
+    
+        var popup_1face6061ad457259d8a1eff32a9d936 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b506ab309b50e01cc19ca08eb03c6be = $(`<div id="html_3b506ab309b50e01cc19ca08eb03c6be" style="width: 100.0%; height: 100.0%;">Destination: Kortedala Aprilgatan (Göteborg kn)<br>Tid: 16:17:00</div>`)[0];
+                popup_1face6061ad457259d8a1eff32a9d936.setContent(html_3b506ab309b50e01cc19ca08eb03c6be);
+            
+        
+
+        marker_6b17860aa1227db53b0eb660a1b5bfdb.bindPopup(popup_1face6061ad457259d8a1eff32a9d936)
+        ;
+
+        
+    
+    
+            var marker_1656a5917d4efcaca4ce7f4535274172 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_de8a5b7aa9bed16df75573ef77404556 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_1656a5917d4efcaca4ce7f4535274172.setIcon(icon_de8a5b7aa9bed16df75573ef77404556);
+        
+    
+        var popup_d7a1c653b49f84ad137eff129624e956 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c40d77c5f157b50df7b2a711f4fe16d = $(`<div id="html_7c40d77c5f157b50df7b2a711f4fe16d" style="width: 100.0%; height: 100.0%;">Destination: Göteborg Varmfrontsgatan<br>Tid: 16:22:00</div>`)[0];
+                popup_d7a1c653b49f84ad137eff129624e956.setContent(html_7c40d77c5f157b50df7b2a711f4fe16d);
+            
+        
+
+        marker_1656a5917d4efcaca4ce7f4535274172.bindPopup(popup_d7a1c653b49f84ad137eff129624e956)
+        ;
+
+        
+    
+    
+            var marker_685b42a0c54f752154751b248617b65c = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_6fbc6a66cb6058f787bd95dbc2e2995f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_685b42a0c54f752154751b248617b65c.setIcon(icon_6fbc6a66cb6058f787bd95dbc2e2995f);
+        
+    
+        var popup_12ce6152130a5ce6b1a9a53c1423fe67 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51bc4d6aae2b04ec7eff9a0301265d93 = $(`<div id="html_51bc4d6aae2b04ec7eff9a0301265d93" style="width: 100.0%; height: 100.0%;">Destination: Kortedala Aprilgatan (Göteborg kn)<br>Tid: 16:26:00</div>`)[0];
+                popup_12ce6152130a5ce6b1a9a53c1423fe67.setContent(html_51bc4d6aae2b04ec7eff9a0301265d93);
+            
+        
+
+        marker_685b42a0c54f752154751b248617b65c.bindPopup(popup_12ce6152130a5ce6b1a9a53c1423fe67)
+        ;
+
+        
+    
+    
+            var marker_e05817c647b3857a8c35cc48f81ff298 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_812268d119f580a5ffb400105fcce6ee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e05817c647b3857a8c35cc48f81ff298.setIcon(icon_812268d119f580a5ffb400105fcce6ee);
+        
+    
+        var popup_9ddcec784517f8311f853dbdef7a0b78 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7b4278e28b37aff5a07570afed5c81d = $(`<div id="html_e7b4278e28b37aff5a07570afed5c81d" style="width: 100.0%; height: 100.0%;">Destination: Göteborg Varmfrontsgatan<br>Tid: 16:30:00</div>`)[0];
+                popup_9ddcec784517f8311f853dbdef7a0b78.setContent(html_e7b4278e28b37aff5a07570afed5c81d);
+            
+        
+
+        marker_e05817c647b3857a8c35cc48f81ff298.bindPopup(popup_9ddcec784517f8311f853dbdef7a0b78)
+        ;
+
+        
+    
+    
+            var marker_404c2b1419213bfa08c6e1387d64e442 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_edece142fb96b9d5d5694c0206227112 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_404c2b1419213bfa08c6e1387d64e442.setIcon(icon_edece142fb96b9d5d5694c0206227112);
+        
+    
+        var popup_a9f6e8be1f528f455425c17bf7179384 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb993f446dde671a825cd848f31b924f = $(`<div id="html_bb993f446dde671a825cd848f31b924f" style="width: 100.0%; height: 100.0%;">Destination: Kortedala Aprilgatan (Göteborg kn)<br>Tid: 16:34:00</div>`)[0];
+                popup_a9f6e8be1f528f455425c17bf7179384.setContent(html_bb993f446dde671a825cd848f31b924f);
+            
+        
+
+        marker_404c2b1419213bfa08c6e1387d64e442.bindPopup(popup_a9f6e8be1f528f455425c17bf7179384)
+        ;
+
+        
+    
+    
+            var marker_776e13e25d3f05b9e86b70a7ab4b4f55 = L.marker(
+                [57.709246, 11.970791],
+                {
+}
+            ).addTo(map_3921d8dc101ea14bf05f40e414b31328);
+        
+    
+            var icon_1787ef58dee2bbaa7b5860e27e3f55cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info_sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_776e13e25d3f05b9e86b70a7ab4b4f55.setIcon(icon_1787ef58dee2bbaa7b5860e27e3f55cb);
+        
+    
+        var popup_28c51f2ad6e665f780d4b93870d860e1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c4f24a4f5f675879c4bf815667b0ae9 = $(`<div id="html_1c4f24a4f5f675879c4bf815667b0ae9" style="width: 100.0%; height: 100.0%;">Destination: Göteborg Varmfrontsgatan<br>Tid: 16:38:00</div>`)[0];
+                popup_28c51f2ad6e665f780d4b93870d860e1.setContent(html_1c4f24a4f5f675879c4bf815667b0ae9);
+            
+        
+
+        marker_776e13e25d3f05b9e86b70a7ab4b4f55.bindPopup(popup_28c51f2ad6e665f780d4b93870d860e1)
+        ;
+
+        
+    
+</script>
+</html>
